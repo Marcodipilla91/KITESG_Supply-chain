@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operia | Kit ESG Zero Stress per Agri-food</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-526494774"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-526494774');
+    </script>
+    <style>
+        :root {
+            --operia-yellow: #FBC02D;
+            --operia-yellow-dark: #F57F17;
+            --operia-yellow-light: #FFF9C4;
+            --text-dark: #1A1A2E;
+            --text-secondary: #4B5563;
+            --bg-light: #F9FAFB;
+            --white: #FFFFFF;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Nav */
+        nav {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--operia-yellow);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(180deg, var(--operia-yellow-light) 0%, #fff 100%);
+        }
+
+        .badge {
+            background: var(--operia-yellow);
+            color: var(--text-dark);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+
+        h1 span {
+            color: var(--operia-yellow-dark);
+            background: -webkit-linear-gradient(var(--operia-yellow-dark), var(--operia-yellow));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            background: var(--operia-yellow);
+            color: var(--text-dark);
+            padding: 18px 36px;
+            border-radius: var(--radius);
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: var(--operia-yellow-dark);
+        }
+
+        .urgency-text {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #D32F2F;
+            font-weight: 600;
+        }
+
+        /* Problem Context */
+        .pain-points {
+            padding: 80px 0;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: left;
+            border-top: 4px solid var(--operia-yellow);
+        }
+
+        .card h3 {
+            margin-bottom: 16px;
+            font-size: 22px;
+        }
+
+        /* Package Details */
+        .package {
+            padding: 80px 0;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            font-size: 18px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: var(--radius);
+            transition: transform 0.2s;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            border-color: var(--operia-yellow);
+        }
+
+        .check-icon {
+            color: #4CAF50;
+            font-size: 24px;
+        }
+
+        /* Price Section */
+        .pricing {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 40px;
+            margin: 40px 24px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            opacity: 0.6;
+            font-size: 24px;
+        }
+
+        .new-price {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--operia-yellow);
+            display: block;
+            margin: 10px 0;
+        }
+
+        .trust-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .award-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-secondary);
+            border-top: 1px solid #eee;
+        }
+
+        /* Popup Styles */
+        #marco-popup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow: hidden;
+            animation: slideUp 0.5s ease;
+            border: 2px solid var(--operia-yellow);
+        }
+
+        .popup-header {
+            background: var(--operia-yellow);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .popup-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #fff;
+            overflow: hidden;
+        }
+
+        .popup-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .popup-name {
+            font-weight: 800;
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+
+        .popup-body {
+            padding: 20px;
+        }
+
+        .popup-msg {
+            background: #f1f1f1;
+            padding: 12px 16px;
+            border-radius: 0 15px 15px 15px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .popup-cta {
+            background: var(--text-dark);
+            color: #fff;
+            text-align: center;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 20px;
+            color: #555;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="container">
+        <div class="logo">OPERIA<span>.</span></div>
+        <div style="font-weight: 600; font-size: 14px;">Digital ESG Activator</div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="badge">PMI FORNITRICI DI GRANDI GRUPPI</div>
+            <h1>Rispondi ai questionari ESG dei <span>Grandi Clienti</span> senza impazzire.</h1>
+            <p class="subtitle">Basta file Excel sparsi, telefonate ai colleghi e "navigazione a braccio". Recupera,
+                mappa e valida i tuoi dati ESG con un metodo rapido e digitale.</p>
+            <a href="https://calendar.app.google/UvbdaU2ngwpZXJ3C8" target="_blank" class="cta-button">SCEGLI IL KIT ESG
+                ZERO STRESS</a>
+            <p class="urgency-text">Solo nelle prossime 24 ore: 299€ invece di 2.500€</p>
+        </div>
+    </section>
+
+    <section class="pain-points">
+        <div class="container">
+            <h2>Perchè compilare Ecovadis, o portali di Lidl, Barilla e altre grandi aziende è un problema?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🔍 Dati Sparsi</h3>
+                    <p>Perdi ore a cercare i dati, capire le domande dei clienti e non sai da che parte girarti.</p>
+                </div>
+                <div class="card">
+                    <h3>📝 Rischio Errore</h3>
+                    <p>non sai dove trovare i dati, quali documenti raccogliere e come validare i dati da un consulente
+                        esperto senza perdere ore rischiando di essere declassato dai clienti.</p>
+                </div>
+                <div class="card">
+                    <h3>⏰ Tempo Perso</h3>
+                    <p>Smetti di fare tutto il lavoro manuale e diventare un compilatore che dipende da consulente che
+                        costano 2.500€ (anche oltre).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="package">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">Cosa ricevi nel Kit "Zero Stress"</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <span class="check-icon">✔</span>
+                    <div>
+                        <strong>Guida Pratica "Dove trovo queste info?":</strong> Uno schema pronto all'uso con l'elenco
+                        esatto di documenti e sorgenti dati.
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="check-icon">✔</span>
+                    <div>
+                        <strong>Video-Pillole Formative:</strong> Tutorial rapidi basati sul Modello Evolutivo (M.
+                        Pedrini) per capire come rispondere alle domande più critiche.
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="check-icon">✔</span>
+                    <div>
+                        <strong>Operia Digital Activator:</strong> Accesso alla piattaforma (3 utenti / 3 progetti) per
+                        caricare i documenti e automatizzare le notifiche ai colleghi.
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="check-icon">✔</span>
+                    <div>
+                        <strong>Validazione Umana Esperta:</strong> Un consulente ESG Senior controlla i dati caricati e
+                        ti conferma se sono a prova di audit o se rischi di sbagliare.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <p class="old-price">Prezzo Valore Consulenza: 2.500€</p>
+            <span class="new-price">299€</span>
+            <p style="margin-bottom: 40px; font-weight: 500; opacity: 0.8;">Fatturazione immediata. Supporto incluso.
+            </p>
+            <a href="https://calendar.app.google/UvbdaU2ngwpZXJ3C8" target="_blank" class="cta-button"
+                style="background: var(--white); color: var(--text-dark);">ATTIVA IL KIT
+                ORA</a>
+            <p style="margin-top: 20px; font-size: 14px;">Offerta riservata per le prime registrazioni settimanali.</p>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <div class="award-badge">
+                <img src="https://img.icons8.com/color/48/award.png" alt="Award">
+                <p>Vincitori del <strong>Green Economy Award</strong></p>
+            </div>
+            <p style="color: var(--text-secondary);">Oltre 50 aziende usano già Operia per governare la sostenibilità.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="operia-beboost-logo.png" alt="Be-boost Logo" style="height: 40px; margin-bottom: 10px;">
+            <p>&copy; 2026 Operia. Parte di Be-boost. P.IVA 02484790309</p>
+        </div>
+    </footer>
+
+    <!-- Marco Chat Popup -->
+    <div id="marco-popup">
+        <span class="popup-close" onclick="closePopup()">×</span>
+        <div class="popup-header">
+            <div class="popup-avatar">
+                <img src="marco-profilo.jpg" alt="Marco Di Pilla">
+            </div>
+            <div class="popup-name">Marco Di Pilla</div>
+        </div>
+        <div class="popup-body">
+            <div class="popup-msg">
+                Ciao! Hai dubbi su come rispondere ai tuoi Grandi Clienti? Fissiamo 10 minuti di call per capire come
+                attivare il tuo kit ESG subito.
+            </div>
+            <a href="https://calendar.app.google/UvbdaU2ngwpZXJ3C8" target="_blank" class="popup-cta">Prenota 10 Minuti
+                con me</a>
+        </div>
+    </div>
+
+    <script>
+        // Mostra il popup dopo 3 secondi
+        setTimeout(function () {
+            document.getElementById('marco-popup').style.display = 'block';
+        }, 3000);
+
+        function closePopup() {
+            document.getElementById('marco-popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
